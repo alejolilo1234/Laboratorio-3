@@ -46,7 +46,5 @@ int main()
   
   // Situación final:
   cout << "Al final: "; viaPrincipal.estadoActual();
-  cout << "";
-  viaPrincipal.~Via();
   return 0;
 }
