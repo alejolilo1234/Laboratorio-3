@@ -10,7 +10,7 @@
 
 /*
   CLASE: Via;
-  INTENCIÓN: Acomodar diferentes vagones en sus vias, dentro de un arreglo privado para asi poder darle ordenes a ellos, como retroceder por un carril, avanzar, etc. Al final poder determinar el orden de los vagones en su estadoActual. 
+  INTENCIÓN: Acomodar diferentes vagones en sus vias, dentro de un vector privado para asi poder darle ordenes a ellos, como retroceder por un carril, avanzar, etc. Al final poder determinar el orden de los vagones en su estadoActual. 
   RELACIONES: Conoce vagones.
 */
 
@@ -30,7 +30,7 @@ class Via
   
   public:
   /**
-    Constructor de la clase.
+    Constructor de la clase. No hace nada.
   */
   Via();
   /**
@@ -38,19 +38,19 @@ class Via
   */
   ~Via();
   /**
-    Introducir un vagon.
+    Inserta un vagon en el vector de punteros a vagones.
   */
   void introducirVagon(Vagon *);
   /**
-    Estado actual.
+    Estado actual en el cual se encuentra el vector de punteros a vagones.
   */
   void estadoActual();
   /**
-    Destructor de la clase.
+    Retroceder por la con vía el vagon correspondiente, hacía RamalIzquierdo o hacía RamalDerecho.
   */
   void retrocederPor(Via *);
   /**
-    Destructor de la clase.
+    Avanzar por la vía con el vagon correspondiente, hacia la vía principal.
   */
   void avanzarDesde(Via *);
 };
