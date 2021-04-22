@@ -10,7 +10,7 @@
 
 /*
   CLASE: Via;
-  INTENCIÓN: Acomodar diferentes vagones en sus vias, dentro de un arreglo privado para asi poder darle ordenes a ellos, como retroceder por un carril, avanzar, etc. Al final poder determinar el orden de los vagones en su estadoActual.
+  INTENCIÓN: Acomodar diferentes vagones en sus vias, dentro de un arreglo privado para asi poder darle ordenes a ellos, como retroceder por un carril, avanzar, etc. Al final poder determinar el orden de los vagones en su estadoActual. 
   RELACIONES: Conoce vagones.
 */
 
