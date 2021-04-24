@@ -1,11 +1,11 @@
 /*
-  Archivo: main.cpp
-  Autores: 
-* Jhon Abril <jhon.abril@correounivalle.edu.co>
-* Deisy Catalina Melo <deisy.melo@correounivalle.edu.co>
-  Fecha creación: 2021-04-21
-  Fecha última modificación: 2021-04-22
-  Licencia: GNU-GPL
+  Archivo: Main.h
+  Autor: Ángel García Baños
+  Email: angel.garcia@correounivalle.edu.co
+  Fecha creación: 2020-03-22
+  Fecha última modificación: 2021-01-24
+  Versión: 0.1
+  Licencia: GPL
 */
 
 /* HISTORIA: hay un tren con 6 vagones numerados consecutivamente de izquierda a derecha, del 1 al 6.
@@ -15,6 +15,9 @@
 
 #include "Via.h"
 #include "Vagon.h"
+#include <iostream>
+using namespace std;
+
 
 int main()
 {
@@ -29,22 +32,22 @@ int main()
   viaPrincipal.introducirVagon(new Vagon(4, true));  // TOMA PROPIEDAD
   viaPrincipal.introducirVagon(new Vagon(5, false));  // TOMA PROPIEDAD
   viaPrincipal.introducirVagon(new Vagon(6, false));  // TOMA PROPIEDAD
+  cout << "Al inicio: " << viaPrincipal.estadoActual() << endl;
   
-  cout << "Al inicio: "; viaPrincipal.estadoActual();
+  //Movimientos para llegar a la solución:
+  viaPrincipal.retrocederPor(ramalIzquierdo);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
+  viaPrincipal.retrocederPor(ramalIzquierdo);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
+  viaPrincipal.retrocederPor(ramalDerecho);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
+  viaPrincipal.retrocederPor(ramalIzquierdo);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
+  viaPrincipal.retrocederPor(ramalDerecho);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
+  viaPrincipal.avanzarDesde(ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+  viaPrincipal.avanzarDesde(ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+  viaPrincipal.avanzarDesde(ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+  viaPrincipal.avanzarDesde(ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+  viaPrincipal.avanzarDesde(ramalDerecho);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
+  viaPrincipal.avanzarDesde(ramalDerecho);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
   
-  //Movimientos de los vagones
-  viaPrincipal.retrocederPor(&ramalIzquierdo);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
-  viaPrincipal.retrocederPor(&ramalIzquierdo);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
-  viaPrincipal.retrocederPor(&ramalDerecho);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
-  viaPrincipal.retrocederPor(&ramalIzquierdo);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
-  viaPrincipal.retrocederPor(&ramalDerecho);  // LA VIA PRINCIPAL CEDE PROPIEDAD DEL VAGON A LA OTRA VIA
-  viaPrincipal.avanzarDesde(&ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
-  viaPrincipal.avanzarDesde(&ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
-  viaPrincipal.avanzarDesde(&ramalIzquierdo);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
-  viaPrincipal.avanzarDesde(&ramalDerecho);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
-  viaPrincipal.avanzarDesde(&ramalDerecho);  // LA VIA PRINCIPAL TOMA PROPIEDAD DEL VAGON QUE ME CEDE LA OTRA VIA
-  
-  // Situación final:
-  cout << "Al final: "; viaPrincipal.estadoActual();
+  // Imprimir la solución: 
+  cout << "Al final:  " << viaPrincipal.estadoActual() << endl;
   return 0;
 }

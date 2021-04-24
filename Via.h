@@ -4,7 +4,7 @@
 * Jhon Abril <jhon.abril@correounivalle.edu.co>
 * Deisy Catalina Melo <deisy.melo@correounivalle.edu.co>
   Fecha creación: 2021-04-21
-  Fecha última modificación: 2021-04-22
+  Fecha última modificación: 2021-04-23
   Licencia: GNU-GPL
 */
 
@@ -44,15 +44,19 @@ class Via
   /**
     Estado actual en el cual se encuentra el vector de punteros a vagones.
   */
-  void estadoActual();
+  string estadoActual();
   /**
     Retroceder por la con vía el vagon correspondiente, hacía RamalIzquierdo o hacía RamalDerecho.
   */
-  void retrocederPor(Via *);
+  void retrocederPor(Via &);
   /**
     Avanzar por la vía con el vagon correspondiente, hacia la vía principal.
   */
-  void avanzarDesde(Via *);
+  void avanzarDesde(Via &);
+  /**
+    Nos dice si el vector de vagones esta vacio o no lo esta.
+  */
+  bool susVagones();
 };
 
 #else
