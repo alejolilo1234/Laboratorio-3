@@ -1,11 +1,11 @@
 /*
-  Archivo: Main.h
-  Autor: Ángel García Baños
-  Email: angel.garcia@correounivalle.edu.co
-  Fecha creación: 2020-03-22
-  Fecha última modificación: 2021-01-24
-  Versión: 0.1
-  Licencia: GPL
+  Archivo: main.cpp
+  Autores: 
+* Jhon Abril <jhon.abril@correounivalle.edu.co>
+* Deisy Catalina Melo <deisy.melo@correounivalle.edu.co>
+  Fecha creación: 2021-04-21
+  Fecha última modificación: 2021-08-26
+  Licencia: GNU-GPL
 */
 
 /* HISTORIA: hay un tren con 6 vagones numerados consecutivamente de izquierda a derecha, del 1 al 6.

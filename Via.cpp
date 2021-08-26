@@ -4,12 +4,11 @@
 * Jhon Abril <jhon.abril@correounivalle.edu.co>
 * Deisy Catalina Melo <deisy.melo@correounivalle.edu.co>
   Fecha creación: 2021-04-21
-  Fecha última modificación: 2021-04-23
+  Fecha última modificación: 2021-08-26
   Licencia: GNU-GPL
 */
 
 #include "Via.h"
-#include "Vagon.h"
 
 Via::Via()
 {
@@ -35,7 +34,7 @@ string Via::estadoActual()
   string resultado = "\n-------------------------\n| "; 
   for(int cualVagon = 0; cualVagon < vagonesViaPrincipal.size(); cualVagon++)
   {
-    for(int pipe = 0; pipe < 1; pipe++)
+    for(int cual = 0; cual < 1; cual++)
     {
       resultado += to_string(vagonesViaPrincipal[cualVagon] -> suNumero());
     }
